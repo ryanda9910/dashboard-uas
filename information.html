@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="information.css">
+  <title>Dashboard Artikel</title>
+</head>
+
+<h1>Tabel Informasi</h1>
+<nav class="container-nav">
+  <a href="./index.html">Artikel</a>
+  <a href="./category.html">Kategori</a>
+  <a href="./information.html">Informasi</a>
+  <a href="./menu.html">Menu</a>
+</nav>
+
+<button id="Add" class="btn-add"> Tambah </button>
+
+<body>
+  <table id="information">
+  </table>
+
+
+  <!-- Modal Add Information -->
+  <div id="modalAdd" class="modal-add">
+    <div class="modal-add-content">
+      <div class="modal-add-container">
+        <span onclick="document.getElementById('modalAdd').style.display='none'" class="w3-closebtn">&times;</span>
+        <p>Tambah Artikel</p>
+  
+        <input type="text" id="inputTitleInformation" placeholder="Masukan Nama Website">
+        <input type="file" id="inputImageInformation" accept="image/png, image/jpeg">
+        <input type="text" id="inputDescriptionInformation" placeholder="Masukan Deskripsi Website" />
+        <input type="text" id="inputLocationInformation" placeholder="Masukan Lokasi Website">
+        <input type="text" id="inputCopyrightInformation" placeholder="Masukan Copyright" />
+        <input type="text" id="inputFacebookInformation" placeholder="Masukan Link Facebook" />
+        <input type="text" id="inputInstagramInformation" placeholder="Masukan Link Instagram">
+        <input type="text" id="inputTwitterInformation" placeholder="Masukan Link Twitter" />
+
+        <button type="submit" id="btnSubmitInformation" class="btn-submit">Submit</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Update Information-->
+  <div id="modalUpdate" class="modal-update">
+    <div class="modal-update-content">
+      <div class="modal-update-container">
+        <span onclick="document.getElementById('modalUpdate').style.display='none'" class="w3-closebtn">&times;</span>
+        <p>Edit Informasi</p>
+
+        <input type="text" id="editTitleInformation" placeholder="Masukan Nama Website">
+        <input type="file" id="editImageInformation" accept="image/png, image/jpeg">
+        <input type="text" id="editDescriptionInformation" placeholder="Masukan Deskripsi Website" />
+        <input type="text" id="editLocationInformation" placeholder="Masukan Lokasi Website">
+        <input type="text" id="editCopyrightInformation" placeholder="Masukan Copyright" />
+        <input type="text" id="editFacebookInformation" placeholder="Masukan Link Facebook" />
+        <input type="text" id="editInstagramInformation" placeholder="Masukan Link Instagram">
+        <input type="text" id="editTwitterInformation" placeholder="Masukan Link Twitter" />
+
+
+        <button type="submit" id="btnEditInformation" class="btn-edit">Submit</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+<script src="./information.js"></script>
+
+</html>

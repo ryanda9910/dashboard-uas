@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>Dashboard Artikel</title>
+</head>
+
+<h1>Tabel Artikel</h1>
+<nav class="container-nav">
+  <a href="./index.html">Artikel</a>
+  <a href="./category.html">Kategori</a>
+  <a href="./information.html">Informasi</a>
+  <a href="./menu.html">Menu</a>
+</nav>
+
+<button id="Add" class="btn-add"> Tambah </button>
+<body>
+  <table id="article">
+  </table>
+
+
+
+<!-- Modal Add Article -->
+<div id="modalAdd" class="modal-add">
+  <div class="modal-add-content">
+    <div class="modal-add-container">
+      <span onclick="document.getElementById('modalAdd').style.display='none'" class="w3-closebtn">&times;</span>
+      <p>Tambah Artikel</p>
+      <input type="text" id="inputTitleArticle" placeholder="Masukan Judul Artikel" />
+
+      <label for="categoryArticle">Pilih Kategori</label>
+      <select id="categoryArticle">
+      </select>
+      <input type="text" id="inputDescriptionArticle" placeholder="Masukan Deskripsi Artikel" />
+      <input type="file" id="inputImageArticle" accept="image/png, image/jpeg">
+      <textarea rows="4" cols="50" id="inputContentArticle" placeholder="Masukan Isi Artikel"></textarea>
+      <button type="submit" id="btnSubmitArticle" class="btn-submit">Submit</button>
+    </div>
+  </div>
+</div>
+<!-- Modal Add Article -->
+
+<!-- Modal Update Article -->
+<div id="modalUpdate" class="modal-update">
+  <div class="modal-update-content">
+    <div class="modal-update-container">
+      <span onclick="document.getElementById('modalUpdate').style.display='none'" class="w3-closebtn">&times;</span>
+      <p>Edit Artikel</p>
+      <input type="text" id="editTitleArticle" placeholder="Masukan Nama Artikel">
+      <label for="categoryArticle">Pilih Kategori</label>
+      <select id="editcategoryArticle">
+      </select>
+      <input type="text" id="editDescriptionArticle" placeholder="Masukan Deskripsi Artikel" />
+      <input type="file" id="editImageArticle" accept="image/png, image/jpeg">
+      <textarea rows="4" cols="50" id="editContentArticle" placeholder="Masukan Isi Artikel"></textarea>
+
+      <button type="submit" id="btnEditArticle" class="btn-edit">Submit</button>
+    </div>
+  </div>
+</div>
+</body>
+<!-- Modal Update Article -->
+<script src="index.js"></script>
+
+</html>

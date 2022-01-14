@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="category.css">
+  <title>Dashboard Artikel</title>
+</head>
+
+<h1>Tabel Kategori</h1>
+<nav class="container-nav">
+  <a href="./index.html">Artikel</a>
+  <a href="./category.html">Kategori</a>
+  <a href="./information.html">Informasi</a>
+  <a href="./menu.html">Menu</a>
+</nav>
+<button id="Add" class="btn-add"> Tambah </button>
+
+<body>
+  <table id="category">
+  </table>
+
+  <!-- Modal Add Category -->
+  <div id="modalAdd" class="modal-add">
+    <div class="modal-add-content">
+      <div class="modal-add-container">
+        <span onclick="document.getElementById('modalAdd').style.display='none'" class="w3-closebtn">&times;</span>
+        <p>Tambah Kategori</p>
+        <input type="text" id="inputNameCategory" placeholder="Masukan Judul Kategori" />
+        </select>
+        <input type="text" id="inputDescriptionCategory" placeholder="Masukan Deskripsi Kategori" />
+        <button type="submit" id="btnSubmitCategory" class="btn-submit">Submit</button>
+      </div>
+    </div>
+  </div>
+  <!-- Modal Add Category -->
+
+  <!-- Modal Update Category -->
+  <div id="modalUpdate" class="modal-update">
+    <div class="modal-update-content">
+      <div class="modal-update-container">
+        <span onclick="document.getElementById('modalUpdate').style.display='none'" class="w3-closebtn">&times;</span>
+        <p>Edit Category</p>
+        <input type="text" id="editNameCategory" placeholder="Masukan Judul Kategori" />
+     
+        <input type="text" id="editDescriptionCategory" placeholder="Masukan Deskripsi Kategori" />
+
+        <button type="submit" id="btnEditCategory" class="btn-edit">Submit</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+<script src="category.js"></script>
+
+</html>
