@@ -290,11 +290,18 @@ const onSubmitInformation = () => {
 
       fetch(`${API_URL}/information`, requestOptions)
         .then((response) => {
+          console.log("respone",response)
           return response.json();
         })
         .then((result) => {
-          alert(result.message);
-          location.reload();
+          if(result.hasOwnProperty('error_result')){
+            alert(result.error_result);
+            location.reload();
+          }else{
+            alert(result.message);
+            location.reload();
+          }
+       
         })
         .catch((error) => {
           console.error(error);
